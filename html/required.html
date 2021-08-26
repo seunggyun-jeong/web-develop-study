@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필수 입력과 읽기 전용 연습</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>배송 정보</legend>
+            <ul>
+                <li>
+                    <label for="product">주문 상품</label>
+                    <input id="product" type="text" value="상품용 3KG" readonly>
+                </li>
+                <li>
+                    <label for="usr-name">이름</label>
+                    <input id="usr-name" type="text" autofocus required>
+                </li>
+                <li>
+                    <label for="adress">배송 주소</label>
+                    <input id="adress" type="text" required>
+                </li>
+                <li>
+                    <label for="e-mail">이메일</label>
+                    <input id="e-mail" type="email" required>
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input id="phone" type="tel" placeholder="하이픈 빼고 입력해 주세요.(01012345678)" required>
+                </li>
+                <li>
+                    <label for="date">배송 지정</label>
+                    <input id="date" type="date" required>
+                    <label for="date">(주문일로부터 최소 3일 이후)</label>
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea id="memo" cols="40" rows="4"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <div id="buttons">
+            <input type="submit" value="주문하기">
+            <input type="reset" value="취소하기">
+        </div>
+    </form>
+</body>
+
+</html>
