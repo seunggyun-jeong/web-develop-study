@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checked 가상 클래스 선택자</title>
+    <style>
+        label {
+            display: block;
+
+        }
+
+        input {
+            float: left;
+            width: 30px;
+        }
+
+        input[type=radio]:checked+label {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>객실 형태</legend>
+            <input type="radio" id="normal" name="room" checked>
+            <label target="normal">기본형 (최대 2인)</label>
+            <input type="radio" id="family" name="room">
+            <label target="family">가족형 (최대 8인)</label>
+        </fieldset>
+    </form>
+</body>
+
+</html>

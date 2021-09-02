@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip</title>
+    <style>
+        div {
+            display: inline-block;
+            box-sizing: border-box;
+            border: 10px dotted black;
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            padding: 20px;
+            background-color: orange;
+        }
+
+        #border {
+            background-clip: border-box;
+        }
+
+        #padding {
+            background-clip: padding-box;
+        }
+
+        #content {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="border"></div>
+    <div id="padding"></div>
+    <div id="content"></div>
+</body>
+
+</html>

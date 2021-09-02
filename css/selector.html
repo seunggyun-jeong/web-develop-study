@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하위 선택자</title>
+    <style>
+        section>p {
+            color: blue;
+        }
+
+        h1~p {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p>섹션의 자식이며 섹션의 하위요소</p>
+        <div>
+            <h1>제목</h1>
+            <p>div의 자식이며 섹션의 하위요소</p>
+            <p>div의 자식이며 섹션의 하위요소 2</p>
+        </div>
+    </section>
+</body>
+
+</html>
