@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 이동시키기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            display: inline-block;
+            border: 1px black solid;
+            margin: 10px auto;
+        }
+
+        h1 {
+            width: 500px;
+            height: 80px;
+            background-color: #000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 80px;
+            transform: skewX(15deg);
+            margin: auto auto;
+        }
+
+        .origin {
+            display: inline-block;
+            margin: 30px;
+            width: 100px;
+            border: 1px red solid;
+            perspective: 300px;
+        }
+
+        .origin #trans1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .origin #scale {
+            width: 100px;
+            height: 100px;
+            background-color: magenta;
+        }
+
+        .origin #rotate {
+            width: 100px;
+            height: 100px;
+            background-color: mediumaquamarine;
+        }
+
+        #trans1:hover {
+            transform: translate3d(30px, 0px, 30px);
+        }
+
+        #scale:hover {
+            transform: scale(0.7, 0.7);
+        }
+
+        #rotate:hover {
+            transform: rotate3d(2.5, 1.2, -1.5, 55deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 변형 함수 익히기</h1>
+    <div id="container">
+        <div class="origin">
+            <div id="trans1"></div>
+        </div>
+        <div class="origin">
+            <div id="scale"></div>
+        </div>
+        <div class="origin">
+            <div id="rotate"></div>
+        </div>
+    </div>
+    <div id="center"></div>
+</body>
+
+</html>
