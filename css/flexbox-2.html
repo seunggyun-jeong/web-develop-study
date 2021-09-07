@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스 2</title>
+    <style>
+        .container {
+            display: flex;
+            height: 300px;
+            background-color: #eee;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: #222
+        }
+
+        #b1 {
+            height: 50px;
+        }
+
+        #b2 {
+            height: 200px;
+        }
+
+        p {
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box" id="b1">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box" id="b2">
+            <p>4</p>
+        </div>
+    </div>
+</body>
+
+</html>

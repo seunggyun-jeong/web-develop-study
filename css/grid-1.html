@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 그리드 레이아웃</title>
+    <style>
+        #wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: minmax(100px, auto);
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .items:nth-of-type(odd) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="items">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum est semper, tincidunt odio at,
+            placerat tellus.
+        </div>
+        <div class="items">
+            Pellentesque ut posuere ipsum, a scelerisque dui. Nullam feugiat justo non suscipit consectetur.
+        </div>
+        <div class="items">
+            Pellentesque ut posuere ipsum
+        </div>
+        <div class="items">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum est semper, tincidunt odio at,
+            placerat tellus.
+        </div>
+        <div class="items">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum est semper, tincidunt odio at,
+            placerat tellus.
+        </div>
+    </div>
+</body>
+
+</html>
