@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 박스 레이아웃 개요</title>
+    <style>
+        #container {
+            display: flex;
+            margin: 100px auto;
+            max-width: 700px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: #ccc;
+            border: 1px solid black;
+            justify-content: space-around;
+
+
+        }
+
+        .box {
+            border: 1px solid black;
+            background-color: orange;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box" id="box1">플렉스 항목1</div>
+        <div class="box" id="box2">플렉스 항목2</div>
+        <div class="box" id="box3">플렉스 항목3</div>
+        <div class="box" id="box4">플렉스 항목4</div>
+        <div class="box" id="box5">플렉스 항목5</div>
+        <div class="box" id="box6">플렉스 항목6</div>
+    </div>
+</body>
+
+</html>
