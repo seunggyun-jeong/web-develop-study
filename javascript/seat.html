@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자리 배치도</h1>
+
+    <script>
+        let memNum, colNum, rowNum, seatNo;
+
+        memNum = prompt("몇 명의 사람이 오나요?");
+        colNum = prompt("한 줄에 몇 명의 사람이 앉을 수 있나요?");
+
+        if (memNum !== null && colNum !== null) {
+            if (memNum % colNum === 0) {
+                rowNum = parseInt(memNum / colNum);
+            }
+            else {
+                rowNum = parseInt(memNum / colNum) + 1;
+            }
+        }
+        else {
+            document.write("입력을 취소하셨습니다.");
+        }
+
+        let i, j;
+        document.write("<table>");
+        for (i = 0; i < rowNum; i++) {
+            document.write("<tr>");
+            for (j = 1; j <= colNum; j++) {
+                seatNo = i * colNum + j;
+                if (seatNo > memNum) break;
+                document.write("<td> 좌석 " + seatNo + "</td>");
+
+            }
+            document.write("</tr>");
+        }
+    </script>
+</body>
+
+</html>

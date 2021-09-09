@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팩토리얼 계산</title>
+</head>
+
+<body>
+    <h1>While 문을 이용하여 팩토리얼 계산하기</h1>
+
+    <script>
+        let n = prompt("숫자를 입력하세요!");
+        let i = 1;
+        let nFact = 1;
+        if (n !== null) {
+            while (i <= n) {
+                nFact *= i;
+                i++;
+            }
+            document.write(n + "! = " + nFact);
+        }
+        else {
+            document.write("취소하셨습니다.");
+        }
+    </script>
+</body>
+
+</html>
