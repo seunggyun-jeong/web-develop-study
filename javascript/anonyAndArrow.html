@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수와 화살표 함수</title>
+</head>
+
+<body>
+    <script>
+
+        //익명함수를 상수(const) 변수에 지정
+        const HI = function () {
+            alert("안녕하세요");
+        }
+
+        HI();
+
+        //화살표 함수
+        const hi = () => { alert("안녕하세요!"); };
+
+        hi();
+
+        //매개변수가 있는 화살표 함수
+        let hi2 = (user) => { document.write(user + "님, 안녕하세요?"); };
+
+        hi2("정승균");
+    </script>
+</body>
+
+</html>

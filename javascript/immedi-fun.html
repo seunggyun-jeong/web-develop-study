@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시 실행 함수</title>
+</head>
+
+<body>
+    <script>
+        //즉시 실행 함수 예제
+        (function () {
+            let userName = prompt("이름을 입력하세요.");
+            document.write("안녕하세요? " + userName + "님!<br>");
+        }());
+
+        //더하기 즉시 실행 함수
+        (function (num1, num2) {
+            sum = num1 + num2; //전역 변수로 사용
+        }(10, 20));
+        document.write("실행 결과 : " + sum);
+    </script>
+</body>
+
+</html>

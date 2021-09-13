@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 부터 n 까지 더하는 함수</title>
+</head>
+
+<body>
+    <script>
+        function calcSum(n) {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            return sum;
+        }
+        let num = prompt("몇 까지의 수를 더할까요?");
+
+        let sum = calcSum(num);
+        alert("1부터 " + num + "까지의 합은 " + sum);
+
+        //화살표 함수로 구현
+        let calSum2 = (n) => {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        num = prompt("몇 까지의 수를 더할까요?");
+
+        let sum2 = calSum2(num);
+        alert("1부터 " + num + "까지의 합은 " + sum2)
+    </script>
+</body>
+
+</html>
