@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리스트에 효과 주기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            border: 1px solid red;
+            width: 250px;
+            height: 350px;
+            margin: auto auto;
+            padding: 30px;
+        }
+
+        #container ul {
+            list-style: none;
+        }
+
+        li {
+            height: 55px;
+            border: 1px solid black;
+            border-bottom: none;
+            border-collapse: collapse;
+            line-height: 55px;
+            text-align: center;
+            transition: linear 0.5s;
+        }
+
+        li:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #bottom {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li>리스트 1</li>
+            <li>리스트 2</li>
+            <li>리스트 3</li>
+            <li>리스트 4</li>
+            <li id="bottom">리스트 5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -5,6 +5,6 @@ let toNow = now.getTime();
 let toFirst = firstDay.getTime();
 let passedTime = toNow - toFirst;
 
-passedTime = Math.round(passedTime / (1000 * 60 * 60 * 24));
+passedTime = Math.ceil(passedTime / (1000 * 60 * 60 * 24));
 
 document.querySelector('#day').innerText = passedTime;
