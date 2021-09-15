@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 500px;
+            margin: 10px auto;
+            padding: 20px;
+        }
+
+        #info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>DOM을 공부합시다.</h1>
+        <a href="#">더보기</a>
+        <div id="info" class="hide"></div>
+    </div>
+    <script>
+        let information = document.querySelector("a");
+        let more = document.querySelector("#info");
+        information.addEventListener("click", addP);
+
+        function addP() {
+            let newP = document.createElement("p");
+            let pMessage = document.createTextNode("DOM은 document object model의 줄임말입니다.");
+
+            let newImg = document.createElement("img");
+            let srcAtt = document.createAttribute("src");
+            let altAtt = document.createAttribute("alt");
+
+            srcAtt.value = "images/dom.jpg";
+            altAtt.value = "돔 트리 예제 이미지";
+
+            newImg.setAttributeNode(srcAtt);
+            newImg.setAttributeNode(altAtt);
+
+            if (more.getAttribute("class") === "hide") {
+                newP.appendChild(pMessage);
+                more.appendChild(newP);
+
+                more.appendChild(newImg);
+
+                more.setAttribute("class", "view");
+                information.innerText = "감추기";
+            }
+            else if (more.getAttribute("class") === "view") {
+                more.removeChild(more.querySelector("p"));
+                more.removeChild(more.querySelector("img"));
+
+                more.setAttribute("class", "hide");
+                information.innerText = "더보기";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

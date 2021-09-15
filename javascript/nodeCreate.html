@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공부해보자</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            width: 370px;
+            float: left;
+            height: 30px;
+            padding-left: 30px;
+        }
+
+        button {
+            width: 90px;
+            height: 30px;
+            float: right;
+            background: #222;
+            color: #fff;
+            border: none;
+        }
+
+        hr {
+            clear: both;
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            padding-top: 50px;
+        }
+
+        li {
+            line-height: 2.5;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Web Programming</h1>
+        <p>공부할 주제를 기록해 보세요</p>
+        <p>공부가 끝난 것은 클릭해서 삭제할 수 있습니다.</p>
+        <form>
+            <input type="text" autofocus id="subject">
+            <button>추가</button>
+        </form>
+        <hr>
+        <ul id="itemList"></ul>
+    </div>
+
+    <script>
+        let bttn = document.querySelector("form");
+
+        bttn.addEventListener("submit", newRegister);
+
+        function newRegister(event) {
+            event.preventDefault();
+            let newItem = document.createElement("li");
+            let subject = document.querySelector("#subject");
+            let newText = document.createTextNode(subject.value);
+
+            newItem.appendChild(newText);
+
+            let itemList = document.querySelector("#itemList");
+            itemList.insertBefore(newItem, itemList.childNodes[0]);
+
+            subject.value = "";
+
+            let items = document.querySelectorAll("li");
+            items[0].addEventListener("click", function () {
+                if (this.parentNode) {
+                    this.parentNode.removeChild(this);
+                }
+            });
+
+        }
+    </script>
+</body>
+
+</html>
